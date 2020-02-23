@@ -1,6 +1,6 @@
 {
 	"name": "npms-score",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"description": "Get the npms scores of a npm package.",
 	"repository": "https://github.com/Richienb/npms-score.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
