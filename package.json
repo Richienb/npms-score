@@ -1,8 +1,8 @@
 {
-	"name": "the-module",
+	"name": "npms-score",
 	"version": "0.0.0",
-	"description": "My awesome module.",
-	"repository": "https://github.com/Richienb/the-module.git",
+	"description": "Get the npms scores of a npm package.",
+	"repository": "https://github.com/Richienb/npms-score.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
 	"license": "MIT",
 	"main": "index.js",
@@ -17,8 +17,19 @@
 		"lint": "xo",
 		"test": "yarn lint && ava"
 	},
-	"keywords": [],
-	"dependencies": {},
+	"keywords": [
+		"package",
+		"scores",
+		"npm",
+		"npms",
+		"automatic",
+		"api",
+		"http",
+		"request"
+	],
+	"dependencies": {
+		"npms-api": "^1.0.0"
+	},
 	"devDependencies": {
 		"ava": "^3.3.0",
 		"eslint-config-richienb": "^0.3.0",

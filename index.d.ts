@@ -1,14 +1,18 @@
+import { Result } from "npms-api"
+
 /**
- * My awesome module.
- * @param input Lorem ipsum.
- * @param postfix Lorem ipsum.
+ * Get the npms scores of a npm package.
+ * @param name The module name to get the scores for.
  * @example
  * ```
- * const theModule = require("the-module");
- * theModule("unicorns");
- * //=> 'unicorns & rainbows'
+ * const npmsScore = require("npms-score");
+ *
+ * (async () => {
+ * 	await npmsScore("cross-spawn");
+ * 	//=> { quality: 0.9995167144697813, popularity: 0.7509903024146316, maintenance: 0.9998891222511912 }
+ * })()
  * ```
 */
-declare function theModule(input: string, { postfix }: { postfix?: string }): string;
+declare async function npmsScore(name: string): Promise<Result.ScoreData["detail"]>
 
-export = theModule;
+export = npmsScore

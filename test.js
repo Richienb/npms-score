@@ -1,13 +1,10 @@
 const test = require("ava")
-const theModule = require(".")
+const npmsScore = require(".")
 
-test("main", (t) => {
-	t.throws(() => {
-		theModule(123)
-	}, {
-		instanceOf: TypeError,
-		message: "Expected a string, got number",
-	})
+test("main", async (t) => {
+	const { quality, popularity, maintenance } = await npmsScore("cross-spawn")
 
-	t.is(theModule("unicorns"), "unicorns & rainbows")
+	t.is(typeof quality, "number")
+	t.is(typeof popularity, "number")
+	t.is(typeof maintenance, "number")
 })

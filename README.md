@@ -1,41 +1,36 @@
-# The module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# Npms Score [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/npms-score/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/npms-score)
 
-My awesome module.
+Get the npms scores of a npm package.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/npms-score.png)](https://npmjs.com/package/npms-score)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install npms-score
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const npmsScore = require("npms-score");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+(async () => {
+	await npmsScore("cross-spawn");
+	//=> { quality: 0.9995167144697813, popularity: 0.7509903024146316, maintenance: 0.9998891222511912 }
+})()
 ```
 
 ## API
 
-### theModule(input, options?)
+### npmsScore(name)
 
-#### input
+#### name
 
 Type: `string`
 
-Lorem ipsum.
+The module name to get the scores for.
 
-#### options
+## Related
 
-Type: `object`
-
-##### postfix
-
-Type: `string`\
-Default: `rainbows`
-
-Lorem ipsum.
+- [npms-api](https://github.com/Richienb/npms-api) - Wrapper for the npms api.

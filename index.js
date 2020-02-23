@@ -1,7 +1,8 @@
 "use strict"
 
-module.exports = (input, { postfix = "rainbows" } = {}) => {
-	if (typeof input !== "string") throw new TypeError(`Expected a string, got ${typeof input}`)
+const { info } = require("npms-api")
 
-	return `${input} & ${postfix}`
+module.exports = async (name) => {
+	const { score } = await info(name)
+	return score.detail
 }
